@@ -1,0 +1,73 @@
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.datepicker {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 24px 28px 20px 28px;
+  width: 320px;
+}
+.datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.datepicker-header button {
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: #888;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.datepicker-header button:hover {
+  background: #f0f0f0;
+}
+.datepicker-header span {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.datepicker-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+.datepicker-day-name {
+  color: #aaa;
+  font-size: 0.95em;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.datepicker-day {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  font-size: 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #333;
+  transition: background 0.2s, color 0.2s;
+}
+.datepicker-day.selected {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+.datepicker-day:hover:not(.selected) {
+  background: #e0e7ff;
+  color: #2563eb;
+}
+.datepicker-day.inactive {
+  color: #ccc;
+  cursor: default;
+} 
